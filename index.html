@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización - AXONSMARTTECHNOLOGIES SAS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container" id="cotizacion-container">
+    <h1>AXONSMARTTECHNOLOGIES SAS</h1>
+
+    <button id="adminItemsBtn">Administrar Ítems</button>
+
+    <div class="section">
+      <label for="objetoCotizacion">Objeto de Cotización:</label>
+      <textarea id="objetoCotizacion" placeholder="Ej: Equipos de cómputo para oficina..." rows="4"></textarea>
+    </div>
+
+    <p>........... por medio del presente ponemos a su consideración la cotización del siguiente equipo:</p>
+
+    <table id="cotizacionTable">
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th>DESCRIPCIÓN</th>
+          <th>CANT.</th>
+          <th>PRECIO UNITARIO ($)</th>
+        </tr>
+      </thead>
+      <tbody id="itemsBody">
+      </tbody>
+    </table>
+
+    <button id="agregarItem">+ Agregar Ítem</button>
+
+    <div class="total-section">
+      <strong>TOTAL: $<span id="totalAmount">0.00</span></strong>
+    </div>
+
+    <!-- Botón de imprimir -->
+    <button id="imprimirCotizacion">📄 Imprimir Cotización</button>
+
+    <!-- Panel de administración -->
+    <div id="adminPanel">
+      <h2>Administrar Ítems de la Base de Datos</h2>
+
+      <!-- 🔵 AGREGADO: Botón para agregar ítems -->
+      <button id="nuevoItemBtn" class="btn-nuevo-item">Agregar ítem</button>
+      <!-- FORMULARIO PARA CREAR NUEVO ÍTEM -->
+      <div id="nuevoItemForm" style="display:none; margin:14px 0;">
+        <input type="text" id="nuevoDesc" placeholder="Descripción del nuevo ítem"
+          style="width:60%; padding:8px; margin-right:8px;">
+        <input type="number" id="nuevoPrecio" placeholder="Precio" step="0.01"
+          style="width:20%; padding:8px; margin-right:8px;">
+        <button id="crearItemBtn" style="padding:8px 14px; border-radius:8px; background:#27ae60; color:#fff;">Crear
+          ítem</button>
+      </div>
+
+      <table id="adminItemsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Precio Unitario ($)</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="adminItemsBody">
+        </tbody>
+      </table>
+
+      <button id="cerrarAdminBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

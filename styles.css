@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+  min-height: 100vh;
+  padding: 30px;
+  color: #333;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 86, 179, 0.08) 0%, transparent 70%);
+  z-index: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #0056b3, #0077e6);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 16px;
+  border: 1px solid #e1e5ee;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  outline: none;
+  color: #333;
+  background-color: #fafafa;
+}
+
+textarea:focus {
+  border-color: #0077e6;
+  box-shadow: 0 0 0 3px rgba(0, 119, 230, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 28px 0;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+thead {
+  background: linear-gradient(135deg, #0056b3, #0077e6);
+  color: white;
+}
+
+th {
+  padding: 18px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: none;
+}
+
+tbody tr {
+  transition: background-color 0.25s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fc;
+}
+
+tbody tr:hover {
+  background-color: #f0f5ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+td {
+  padding: 16px;
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #e1e5ee;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e1e5ee;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+  background-color: #fafafa;
+}
+
+select {
+  appearance: none;
+}
+
+select:focus,
+input:focus {
+  border-color: #0077e6;
+  box-shadow: 0 0 0 2px rgba(0, 119, 230, 0.2);
+}
+
+#cotizacionTable .precio {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+#agregarItem {
+  background: linear-gradient(135deg, #0077e6, #0056b3);
+  color: white;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.total-section {
+  text-align: right;
+  margin: 32px 0 28px;
+  padding: 20px;
+  background: #f8f9fc;
+  border-radius: 12px;
+  border-left: 4px solid #0077e6;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Panel Admin */
+#adminPanel {
+  display: none;
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #e1e5ee;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+#adminPanel h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #27ae60;
+}
+
+/* 🔵 NUEVO BOTÓN */
+.btn-nuevo-item {
+  background: #0077e6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.btn-nuevo-item:hover {
+  background: #005bb5;
+}
+
+/* Botón cerrar */
+#cerrarAdminBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Impresión */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cotizacion-container,
+  #cotizacion-container * {
+    visibility: visible;
+  }
+  #adminItemsBtn,
+  #adminPanel,
+  #agregarItem,
+  #imprimirCotizacion {
+    display: none !important;
+  }
+}
